@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Login from './Login/Login';
 import Tabs from './Tabs/Tabs';
-import PromotionsEditor from './PromotionsEditor/PromotionsEditor'; // Импортируем редактор акций
+import PromotionsEditor from './PromotionsEditor/PromotionsEditor';
+import PriceListEditor from './PriceListEditor/PriceListEditor'; // Импортируем редактор прайс-листа
 import styles from './Admin.module.css';
 
 const Admin = () => {
@@ -27,6 +28,7 @@ const Admin = () => {
             {activeTab === 'editor' && <PromotionsEditor />}
             {activeTab === 'messages' && <div>Сообщения</div>}
             {activeTab === 'settings' && <div>Настройки</div>}
+            {activeTab === 'priceList' && <PriceListEditor />}
           </div>
         </div>
       )}

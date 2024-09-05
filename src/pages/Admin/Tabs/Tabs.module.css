@@ -1,7 +1,8 @@
 .tabs {
   display: flex;
   flex-direction: column;
-  background-color: #f1f1f1;
+  background-color: #ebebeb;
+  border-radius: 10px;
 }
 
 .tab {
@@ -12,15 +13,16 @@
   cursor: pointer;
   text-align: center;
   font-size: 16px;
+  color: #000;
 }
 
 .tab:hover {
-  background-color: #e0e0e0;
+  background-color: #ff6347;
 }
 
 .active {
-  background-color: #ddd;
-  color: #000;
+  background-color: #ff4500;
+  color: #ffffff;
 }
 
 .tab:not(:last-child) {

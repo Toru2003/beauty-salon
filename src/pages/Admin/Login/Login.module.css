@@ -17,7 +17,7 @@
   
   .loginButton {
     padding: 10px 20px;
-    background-color: #af7c4c;
+    background-color: #ff6347;
     color: white;
     border: none;
     border-radius: 5px;
@@ -25,7 +25,7 @@
   }
   
   .loginButton:hover {
-    background-color: #a04545;
+    background-color: #ff4500;
   }
   
   .error {

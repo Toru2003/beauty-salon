@@ -5,6 +5,12 @@ import Home from './pages/Home/Home'; // Импортируем Home
 import Admin from './pages/Admin/Admin'; // Импортируем Admin
 import './index.css'; // Импортируем общий CSS
 import ServiceDetails from './pages/Home/ServicesBlock/ServicesBlock';
+import Depilation from './pages/services/Depilation';
+import Brows from './pages/services/Brows';
+import Manicure from './pages/services/Manicure';
+import Haircut from './pages/services/Haircut';
+
+
 
 function App() {
   return (
@@ -14,10 +20,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/admin" element={<Admin />} />
-          <Route path="/depilation" element={<ServiceDetails service="depilation" />} />
-          <Route path="/manicure" element={<ServiceDetails service="manicure" />} />
-          <Route path="/brows" element={<ServiceDetails service="brows" />} />
-          <Route path="/haircut" element={<ServiceDetails service="haircut" />} />
+          <Route path="/brows" element={<Brows />} />
+          <Route path="/manicure" element={<Manicure />} />
+          <Route path="/haircut" element={<Haircut />} />
+          <Route path="/depilation" element={<Depilation />} />
         </Routes>
       </div>
     </Router>

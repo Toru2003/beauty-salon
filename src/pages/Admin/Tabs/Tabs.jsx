@@ -29,6 +29,12 @@ const Tabs = ({ onTabChange }) => {
       >
         Настройки
       </button>
+      <button
+        className={`${styles.tab} ${activeTab === 'priceList' ? styles.active : ''}`}
+        onClick={() => handleTabChange('priceList')}
+      >
+        Редактор прайс-листа
+      </button>
     </div>
   );
 };
