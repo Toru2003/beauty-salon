@@ -1,4 +1,6 @@
 body {
+  background-color: rgb(199, 199, 199);
+  background-image: url("https://berezkazd.ru/upload/iblock/3c3/myxlqanrp70zsda0oqxh9eq4nkfhha1n/1cf41eb8_699b_11ee_859f_e66cd9a71130_1d4880d4_699b_11ee_859f_e66cd9a71130.jpg");
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +12,14 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Общие стили для отступов слева и справа */
+.pageContainer {
+  padding: 0 100px; /* Отступы слева и справа */
+  min-height: 100vh; /* Минимальная высота 100% от высоты окна браузера */
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px; /* Отступ сверху, чтобы не перекрывать контент хедером */
+  margin-bottom: 80px;
 }

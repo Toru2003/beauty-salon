@@ -1,0 +1,45 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20% 20px 20%;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px; /* Отступ для лого */
+}
+
+.info {
+  display: flex;
+  gap: 100px; /* Отступы между блоками справа */
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoBlock strong {
+  font-weight: bold;
+}
+
+.infoBlock span {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .info {
+    flex-direction: column;
+    text-align: right;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,15 @@
+.adminContainer {
+    display: flex;
+    min-height: 600px;
+  }
+  
+  .content {
+    display: flex;
+    width: 100%;
+  }
+  
+  .tabContent {
+    flex: 1;
+    padding: 20px;
+  }
+  

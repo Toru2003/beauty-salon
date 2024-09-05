@@ -1,0 +1,58 @@
+.promotionsEditor {
+  padding: 20px;
+}
+
+.promotionEntry {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.promotionInput {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.removeButton, .addButton, .saveButton {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.removeButton {
+  background-color: #ff6f6f;
+  color: white;
+}
+
+.removeButton:hover {
+  background-color: #ff4c4c;
+}
+
+.addButton {
+  background-color: #4caf50;
+  color: white;
+}
+
+.addButton:hover {
+  background-color: #45a049;
+}
+
+.saveButton {
+  background-color: #2196f3;
+  color: white;
+}
+
+.saveButton:hover {
+  background-color: #1e88e5;
+}
+
+.noPromotions {
+  color: #888;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+}

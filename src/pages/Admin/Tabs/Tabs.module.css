@@ -1,0 +1,28 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f1f1;
+}
+
+.tab {
+  padding: 15px;
+  border: 1px solid #dddddd00;
+  border-bottom: none;
+  background-color: #ffffff00;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+}
+
+.tab:hover {
+  background-color: #e0e0e0;
+}
+
+.active {
+  background-color: #ddd;
+  color: #000;
+}
+
+.tab:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
