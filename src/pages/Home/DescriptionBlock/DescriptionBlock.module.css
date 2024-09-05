@@ -6,11 +6,13 @@
     background-color: #ffffff77;
     min-height: 600px;
     border-radius: 50px;
+    
   }
   
   .textBlock {
     flex: 1;
     max-width: 50%;
+    text-align: right;
   }
   
   .title {
