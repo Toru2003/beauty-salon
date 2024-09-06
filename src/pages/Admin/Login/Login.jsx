@@ -23,7 +23,7 @@ const Login = ({ onLogin }) => {
         <h2>Вход в админ-панель</h2>
         {error && <p className={styles.error}>{error}</p>}
         <input
-          type="text"
+          type="Logintext"
           placeholder="Логин"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
