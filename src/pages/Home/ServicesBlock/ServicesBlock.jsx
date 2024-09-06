@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './ServicesBlock.module.css';
 
@@ -6,7 +6,7 @@ const services = [
   {
     id: 'depilation',
     title: 'Депиляция',
-    imageUrl: 'https://i.pinimg.com/originals/f0/11/a5/f011a55da79318dcb80866b1dcb6b688.jpg', // Укажите здесь ссылки на изображения
+    imageUrl: 'https://i.pinimg.com/originals/f0/11/a5/f011a55da79318dcb80866b1dcb6b688.jpg',
   },
   {
     id: 'manicure',
@@ -25,7 +25,7 @@ const services = [
   },
 ];
 
-const ServicesBlock = () => {
+const ServicesBlock = forwardRef((props, ref) => {
   const navigate = useNavigate();
 
   const handleMoreDetails = (serviceId) => {
@@ -33,7 +33,7 @@ const ServicesBlock = () => {
   };
 
   return (
-    <div className={styles.servicesContainer}>
+    <div className={styles.servicesContainer} ref={ref}>
       <h2 className={styles.title}>Наши услуги</h2>
       {services.map((service) => (
         <div key={service.id} className={styles.card}>
@@ -51,6 +51,6 @@ const ServicesBlock = () => {
       ))}
     </div>
   );
-};
+});
 
 export default ServicesBlock;

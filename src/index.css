@@ -7,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 800px;
 }
 
 code {
@@ -15,13 +16,26 @@ code {
 }
 
 
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+main {
+  flex: 1;
+}
+
+
+
+
+
 .pageContainer {
   padding: 0 100px; 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   margin-top: 80px; 
-  margin-bottom: 80px;
 }
 
 /* Стили для навигационных стрелок */

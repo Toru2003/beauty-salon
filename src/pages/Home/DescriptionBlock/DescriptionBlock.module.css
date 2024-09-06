@@ -1,6 +1,6 @@
 .homeSection {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 20px 20px;
     background-color: #ffffff77;
@@ -11,7 +11,7 @@
   
   .textBlock {
     flex: 1;
-    max-width: 50%;
+    max-width: 30%;
     text-align: right;
   }
   
