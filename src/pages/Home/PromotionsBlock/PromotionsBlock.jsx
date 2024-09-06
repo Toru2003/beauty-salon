@@ -18,7 +18,7 @@ const PromotionsBlock = () => {
         <ul className={styles.promotionsList}>
           {promotions.map((promotion, index) => (
             <li key={index} className={styles.promotionItem}>
-              • {promotion}
+              {promotion}
             </li>
           ))}
         </ul>

@@ -1,10 +1,11 @@
 // src/pages/Brows/Brows.jsx
 import React, { useState, useEffect } from 'react';
 import styles from './services.module.css';
+import browsimg from '../../images/browsimg.png';
 
 const Brows = () => {
   const [prices, setPrices] = useState([]);
-  const [description] = useState('Описание услуги для бровей и ресниц.');
+  const [description] = useState('Безусловно, тушь поможет добиться неплохого результата. Однако уже через несколько часов она начнет осыпаться, ее необходимо каждый раз тщательно смывать при помощи специальных средств. Мы предлагаем Вам современные салонные процедуры, которые помогут сделать взгляд незабываемым без вреда для натуральных ресничек.');
 
   useEffect(() => {
     const storedPrices = JSON.parse(localStorage.getItem('prices')) || {};
@@ -14,7 +15,7 @@ const Brows = () => {
   return (
     <div className={styles.container}>
       <div className={styles.image}>
-        <img src="https://i.pinimg.com/originals/f0/11/a5/f011a55da79318dcb80866b1dcb6b688.jpg" alt="Brows" />
+        <img src={browsimg} alt="Brows" />
       </div>
       <div className={styles.details}>
         <h1>Брови/Ресницы</h1>

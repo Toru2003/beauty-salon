@@ -3,7 +3,7 @@ import PromotionsBlock from './PromotionsBlock/PromotionsBlock';
 import DescriptionBlock from './DescriptionBlock/DescriptionBlock'; 
 import DetailedInfoBlock from './DetailedInfoBlock/DetailedInfoBlock'; 
 import ServicesBlock from './ServicesBlock/ServicesBlock';
-import Footer from './Footer/Footer';
+import Footer from '../../shared/Footer/Footer';
 import WhyUs from './WhyUs/WhyUs';
 
 const Home = () => {

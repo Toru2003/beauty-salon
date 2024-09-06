@@ -1,15 +1,14 @@
 .promotionsBlock {
     background-color: #f1f1f1;
     padding: 20px;
-    margin: 20px 150px; /* Увеличиваем отступы сбоку */
-    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1); /* Внутренняя тень */
-    text-align: center; /* Центрируем текст в блоке */
+    margin: 20px 150px; 
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1); 
   }
   
   .title {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #333; /* Темно-серый цвет заголовка */
+    color: #333; 
   }
   
   .noPromotions {
@@ -21,13 +20,14 @@
   .promotionsList {
     font-size: 18px;
     line-height: 1.6;
-    list-style-type: none; /* Убираем стандартные маркеры списка */
-    padding: 0; /* Убираем внутренний отступ */
-    margin: 0; /* Убираем внешний отступ */
+    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
   }
   
   .promotionItem {
-    margin-bottom: 10px; /* Отступ между элементами списка */
-    color: #333; /* Темно-серый цвет акций */
+    margin-bottom: 5px; 
+    color: #333; 
+    font-style: italic;
   }
   

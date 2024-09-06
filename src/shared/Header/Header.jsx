@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Импортируем Link
+import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 import '../public/logo.svg';
+
 
 const Header = () => {
   return (
@@ -13,7 +14,7 @@ const Header = () => {
       <div className={styles.info}>
         <div className={styles.infoBlock}>
           <strong>г. Челябинск</strong>
-          <span>ул. Бейвеля, д. 18</span>
+          <span>ул. Барбюсса, д. 18</span>
         </div>
         <div className={styles.infoBlock}>
           <strong>Режим работы:</strong>
@@ -21,7 +22,7 @@ const Header = () => {
         </div>
         <div className={styles.infoBlock}>
           <strong>Номер:</strong>
-          <span>+7 (919) 124-30-08</span>
+          <span>+7 (999) 999-99-99</span>
         </div>
       </div>
     </header>

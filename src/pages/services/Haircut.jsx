@@ -1,10 +1,11 @@
 // src/pages/Haircut/Haircut.jsx
 import React, { useState, useEffect } from 'react';
 import styles from './services.module.css';
+import haircutimg from '../../images/haircutimg.png';
 
 const Haircut = () => {
   const [prices, setPrices] = useState([]);
-  const [description] = useState('Описание услуги стрижки.');
+  const [description] = useState('Чем отличается парикмахер-стилист от простого мастера? Это своеобразный креативный директор для вашей прически, который не только правильно и точно сделает стрижку или укладку, но сделает ее уникальной именно для своего клиента. Стилист-парикмахер тщательно прорабатывает ту идею, с которой модница к нему приходит, подбирает альтернативные варианты и самые лучшие форматы воплощения идеи в жизнь.');
 
   useEffect(() => {
     const storedPrices = JSON.parse(localStorage.getItem('prices')) || {};
@@ -14,7 +15,7 @@ const Haircut = () => {
   return (
     <div className={styles.container}>
       <div className={styles.image}>
-        <img src="https://i.pinimg.com/originals/f0/11/a5/f011a55da79318dcb80866b1dcb6b688.jpg" alt="Haircut" />
+        <img src={haircutimg} alt="Haircut" />
       </div>
       <div className={styles.details}>
         <h1>Стрижка</h1>

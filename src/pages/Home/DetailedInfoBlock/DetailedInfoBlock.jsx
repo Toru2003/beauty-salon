@@ -3,14 +3,18 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper';
 import 'swiper/swiper-bundle.css';
 import styles from './DetailedInfoBlock.module.css';
+import primer1 from '../../../images/primer1.png';
+import primer2 from '../../../images/primer2.png';
+import primer3 from '../../../images/primer3.png';
+import primer4 from '../../../images/primer4.png';
+
 
 const DetailedInfoBlock = () => {
   const images = [
-    'https://avatars.mds.yandex.net/i?id=690120a2a3029cc0f0535916905112080bb6ca4db6515874-12625178-images-thumbs&n=13',
-    'https://avatars.mds.yandex.net/i?id=690120a2a3029cc0f0535916905112080bb6ca4db6515874-12625178-images-thumbs&n=13',
-    'https://avatars.mds.yandex.net/i?id=690120a2a3029cc0f0535916905112080bb6ca4db6515874-12625178-images-thumbs&n=13',
-    'https://avatars.mds.yandex.net/i?id=690120a2a3029cc0f0535916905112080bb6ca4db6515874-12625178-images-thumbs&n=13',
-    'https://avatars.mds.yandex.net/i?id=690120a2a3029cc0f0535916905112080bb6ca4db6515874-12625178-images-thumbs&n=13',
+    primer1,
+    primer2,
+    primer3,
+    primer4,
   ];
 
   return (

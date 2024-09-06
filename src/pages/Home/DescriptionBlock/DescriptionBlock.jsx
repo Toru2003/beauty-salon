@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './DescriptionBlock.module.css';
+import imagest from '../../../images/mainimage.png';
+
 
 const DescriptionBlock = ({ scrollToServices }) => {
   return (
@@ -16,7 +18,7 @@ const DescriptionBlock = ({ scrollToServices }) => {
       </div>
       <div className={styles.imageBlock}>
         <img
-          src="https://yt3.ggpht.com/a/AGF-l78OL5DjYiwMUuj3JiSLWUWXXQUNztM7xf7Wcg=s900-c-k-c0xffffffff-no-rj-mo"
+          src={imagest}
           alt="Beauty Salon"
           className={styles.image}
         />

@@ -1,27 +1,31 @@
 import React, { forwardRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './ServicesBlock.module.css';
+import imagedepilation from '../../../images/depilation.png';
+import browsimg from '../../../images/browsimg.png';
+import manicureimg from '../../../images/manicureimg.png';
+import haircutimg from '../../../images/haircutimg.png';
 
 const services = [
   {
     id: 'depilation',
     title: 'Депиляция',
-    imageUrl: 'https://i.pinimg.com/originals/f0/11/a5/f011a55da79318dcb80866b1dcb6b688.jpg',
+    imageUrl: imagedepilation,
   },
   {
     id: 'manicure',
     title: 'Маникюр/Педикюр',
-    imageUrl: 'https://i.pinimg.com/originals/f0/11/a5/f011a55da79318dcb80866b1dcb6b688.jpg',
+    imageUrl: manicureimg,
   },
   {
     id: 'brows',
     title: 'Брови/Ресницы',
-    imageUrl: 'https://i.pinimg.com/originals/f0/11/a5/f011a55da79318dcb80866b1dcb6b688.jpg',
+    imageUrl: browsimg,
   },
   {
     id: 'haircut',
     title: 'Стрижка',
-    imageUrl: 'https://i.pinimg.com/originals/f0/11/a5/f011a55da79318dcb80866b1dcb6b688.jpg',
+    imageUrl: haircutimg,
   },
 ];
 
@@ -53,4 +57,4 @@ const ServicesBlock = forwardRef((props, ref) => {
   );
 });
 
-export default ServicesBlock;
+export default ServicesBlock; 

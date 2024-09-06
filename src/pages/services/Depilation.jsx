@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './services.module.css';
 import Modal from '../../shared/BookingModal/BookingModal.jsx';
+import imagedepilation from '../../images/depilation.png';
 
 const Depilation = () => {
   const [prices, setPrices] = useState([]);
@@ -25,7 +26,7 @@ const Depilation = () => {
   return (
     <div className={styles.container}>
       <div className={styles.image}>
-        <img src="https://i.pinimg.com/originals/f0/11/a5/f011a55da79318dcb80866b1dcb6b688.jpg" alt="Depilation" />
+        <img src={imagedepilation} alt="Depilation" />
       </div>
       <div className={styles.details}>
         <h1>Депиляция</h1>

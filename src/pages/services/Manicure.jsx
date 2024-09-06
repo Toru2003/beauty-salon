@@ -1,10 +1,12 @@
 // src/pages/Manicure/Manicure.jsx
 import React, { useState, useEffect } from 'react';
 import styles from './services.module.css';
+import manicureimg from '../../images/manicureimg.png';
+
 
 const Manicure = () => {
   const [prices, setPrices] = useState([]);
-  const [description] = useState('Описание услуги маникюра.');
+  const [description] = useState('Эти процедуры позволяют чувствовать себя уверенно в любой ситуации. Более того, нейл-дизайн помогает разнообразить образ, сделать его более стильным и актуальным. Наш Салон красоты предлагает девушкам качественные услуги ногтевого сервиса, а опытные мастера – гордость салона. Мы предлагаем широкий выбор уходовых процедур,  разные виды маникюра и педикюра. В салоне используются только профессиональные декоративные покрытия известных мировых брендов.');
 
   useEffect(() => {
     const storedPrices = JSON.parse(localStorage.getItem('prices')) || {};
@@ -14,7 +16,7 @@ const Manicure = () => {
   return (
     <div className={styles.container}>
       <div className={styles.image}>
-        <img src="https://i.pinimg.com/originals/f0/11/a5/f011a55da79318dcb80866b1dcb6b688.jpg" alt="Manicure" />
+        <img src={manicureimg} alt="Manicure" />
       </div>
       <div className={styles.details}>
         <h1>Маникюр/Педикюр</h1>
