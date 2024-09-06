@@ -1,7 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper';
-import 'swiper/swiper-bundle.min.css';
+import 'swiper/swiper-bundle.css';
 import styles from './DetailedInfoBlock.module.css';
 
 const DetailedInfoBlock = () => {

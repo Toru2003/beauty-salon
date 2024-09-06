@@ -23,3 +23,19 @@ code {
   margin-top: 80px; 
   margin-bottom: 80px;
 }
+
+/* Стили для навигационных стрелок */
+.swiper-button-prev, .swiper-button-next {
+  color: #df9100 !important;  /* Оранжевый цвет для стрелок */
+}
+
+/* Стили для пульсационных точек (радио) */
+.swiper-pagination-bullet {
+  background-color: #df9100 !important; /* Оранжевый цвет для точек */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #df9100 !important; /* Оранжевый цвет для активной точки */
+}
+  
+  

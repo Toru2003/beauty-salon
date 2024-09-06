@@ -5,6 +5,14 @@
   border-radius: 10px;
   height: 500px;
 }
+.logoutButton{
+  background-color: #e60000;
+  margin-top: auto; 
+}
+
+.logoutButton:hover{
+  background-color: #ff0000;
+}
 
 .tab {
   padding: 15px;
