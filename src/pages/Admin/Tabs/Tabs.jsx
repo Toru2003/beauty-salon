@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Tabs.module.css';
 
-const Tabs = ({ onTabChange }) => {
+const Tabs = ({ onTabChange, onLogout }) => {
   const [activeTab, setActiveTab] = useState('editor');
 
   const handleTabChange = (tab) => {
@@ -28,6 +28,18 @@ const Tabs = ({ onTabChange }) => {
         onClick={() => handleTabChange('settings')}
       >
         Настройки
+      </button>
+      <button
+        className={`${styles.tab} ${activeTab === 'priceList' ? styles.active : ''}`}
+        onClick={() => handleTabChange('priceList')}
+      >
+        Редактор прайс-листа
+      </button>
+      <button
+        className={styles.logoutButton}
+        onClick={onLogout}
+      >
+        Выход
       </button>
     </div>
   );

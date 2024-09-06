@@ -32,18 +32,3 @@
     line-height: 1.5;
   }
   
-  /* Добавим стили для навигационных кнопок Swiper */
-  .swiper-button-prev, .swiper-button-next {
-    color: #df9100;
-  }
-  
-  .swiper-pagination-bullet {
-    background-color: #df9100;
-  }
-  
-  .swiper-pagination-bullet-active {
-    background-color: #555;
-  }
-
-  
-  

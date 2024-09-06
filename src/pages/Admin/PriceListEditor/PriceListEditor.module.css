@@ -1,0 +1,52 @@
+/* src/Admin/PriceListEditor/PriceListEditor.module.css */
+.editor {
+    padding: 20px;
+  }
+  
+  .pageSelector {
+    margin-bottom: 20px;
+  }
+  
+  .pageSelector label {
+    margin-right: 10px;
+  }
+  
+  .pageSelector select {
+    padding: 5px;
+  }
+  
+  .table {
+    margin-top: 20px;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .row input {
+    margin-right: 10px;
+    padding: 5px;
+  }
+  
+  .row button {
+    margin: 0 0;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .buttonsa{
+    margin: 10px 10px;
+  }
+  
+  button:hover {
+    background-color: #ff4500;
+  }
+  

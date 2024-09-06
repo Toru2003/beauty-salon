@@ -1,7 +1,7 @@
 .promotionsBlock {
     background-color: #f1f1f1;
     padding: 20px;
-    margin: 20px 40px; /* Увеличиваем отступы сбоку */
+    margin: 20px 150px; /* Увеличиваем отступы сбоку */
     box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1); /* Внутренняя тень */
     text-align: center; /* Центрируем текст в блоке */
   }
