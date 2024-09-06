@@ -4,6 +4,7 @@ import DescriptionBlock from './DescriptionBlock/DescriptionBlock';
 import DetailedInfoBlock from './DetailedInfoBlock/DetailedInfoBlock'; 
 import ServicesBlock from './ServicesBlock/ServicesBlock';
 import Footer from './Footer/Footer';
+import WhyUs from './WhyUs/WhyUs';
 
 const Home = () => {
   const servicesRef = useRef(null);
@@ -20,6 +21,7 @@ const Home = () => {
       <PromotionsBlock />
       <DetailedInfoBlock /> 
       <ServicesBlock ref={servicesRef} />
+      <WhyUs /> 
       <Footer />
     </div>
   );

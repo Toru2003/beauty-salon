@@ -1,0 +1,54 @@
+/* Фон блока */
+.whyUsBlock {
+    background-color: #e9e9e9; /* Розовый фон блока */
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin: 50px auto;
+    width: 700px;
+    border-radius: 10px;
+  }
+  
+  /* Заголовок блока */
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px; /* Отступ снизу */
+  }
+  
+  /* Стили для карточек */
+  .cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Расстояние между карточками */
+    justify-content: center; /* Центрирование карточек по горизонтали */
+  }
+  
+  .card {
+    width: 200px; /* Ширина карточки */
+    height: 200px; /* Высота карточки (делаем карточку квадратной) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .card img {
+    width: 60px; /* Размер иконки */
+    height: 60px;
+    margin-bottom: 10px; /* Отступ между иконкой и заголовком */
+  }
+  
+  .card h3 {
+    margin: 10px 0; /* Отступы вокруг заголовка */
+    font-size: 18px;
+  }
+  
+  .card p {
+    font-size: 14px;
+    color: #555; /* Цвет текста */
+  }
+  
