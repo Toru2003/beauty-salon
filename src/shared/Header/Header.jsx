@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Импортируем Link
 import styles from './Header.module.css';
+import '../public/logo.svg';
 
 const Header = () => {
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.logo}>
-        Beauty Salon
+      <img src='logo.svg' alt="Site Logo" className={styles.logoico} /> 
+        <p>BeautySalon</p>
       </Link>
       <div className={styles.info}>
         <div className={styles.infoBlock}>

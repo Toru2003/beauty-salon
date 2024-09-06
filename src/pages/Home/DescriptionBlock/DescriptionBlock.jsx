@@ -5,7 +5,7 @@ const DescriptionBlock = ({ scrollToServices }) => {
   return (
     <section className={styles.homeSection}>
       <div className={styles.textBlock}>
-        <h1 className={styles.title}>Beauty Salon</h1>
+        <h1 className={styles.title}>BeautySalon</h1>
         <p className={styles.description}>
           Добро пожаловать в наш салон красоты, где вы сможете получить
           самые качественные услуги по уходу за собой.

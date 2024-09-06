@@ -12,10 +12,32 @@
   z-index: 100;
 }
 
+
+.logo:hover{
+  color: rgb(255, 255, 255); 
+}
 .logo {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  margin-right: 20px; /* Отступ для лого */
+  text-decoration: none; /* Убирает подчеркивание */
+  color: rgb(228, 228, 228); /* Устанавливает цвет текста ссылки на белый */
+  font-family: "Sevillana", cursive;
+  font-style: normal;
+}
+
+.logo p{
   font-size: 24px;
   font-weight: bold;
-  margin-right: 20px; /* Отступ для лого */
+  padding: 10px;
+  margin: 0;
+}
+
+.logoico{
+  width: 45px; /* Задайте нужный размер логотипа */
+  height: auto;
+  fill: aqua;
 }
 
 .info {
