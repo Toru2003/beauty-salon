@@ -3,6 +3,7 @@
   flex-direction: column;
   background-color: #ebebeb;
   border-radius: 10px;
+  height: 500px;
 }
 
 .tab {
@@ -14,6 +15,7 @@
   text-align: center;
   font-size: 16px;
   color: #000;
+  margin: 0 0;
 }
 
 .tab:hover {

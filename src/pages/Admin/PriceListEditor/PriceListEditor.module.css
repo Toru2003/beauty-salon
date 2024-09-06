@@ -31,7 +31,7 @@
   }
   
   .row button {
-    margin-left: 10px;
+    margin: 0 0;
   }
   
   button {
@@ -41,7 +41,9 @@
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    margin: 0 10px;
+  }
+  .buttonsa{
+    margin: 10px 10px;
   }
   
   button:hover {

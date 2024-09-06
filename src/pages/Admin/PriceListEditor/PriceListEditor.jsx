@@ -69,8 +69,8 @@ const PriceListEditor = () => {
             <button onClick={() => handleDelete(index)}>Удалить</button>
           </div>
         ))}
-        <button onClick={handleAddItem}>Добавить новую услугу</button>
-        <button onClick={handleSave}>Сохранить изменения</button>
+        <button className={styles.buttonsa} onClick={handleAddItem}>Добавить новую услугу</button>
+        <button className={styles.buttonsa} onClick={handleSave}>Сохранить изменения</button>
       </div>
     </div>
   );

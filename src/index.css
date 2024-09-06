@@ -14,12 +14,12 @@ code {
     monospace;
 }
 
-/* Общие стили для отступов слева и справа */
+
 .pageContainer {
-  padding: 0 100px; /* Отступы слева и справа */
-  min-height: 100vh; /* Минимальная высота 100% от высоты окна браузера */
+  padding: 0 100px; 
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  margin-top: 80px; /* Отступ сверху, чтобы не перекрывать контент хедером */
+  margin-top: 80px; 
   margin-bottom: 80px;
 }
