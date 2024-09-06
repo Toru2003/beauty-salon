@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import styles from './services.module.css';
 import Modal from '../../shared/BookingModal/BookingModal.jsx';

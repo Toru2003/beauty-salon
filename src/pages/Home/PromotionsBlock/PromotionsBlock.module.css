@@ -3,6 +3,7 @@
     padding: 20px;
     margin: 20px 150px; 
     box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center;
   }
   
   .title {

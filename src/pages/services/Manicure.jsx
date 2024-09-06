@@ -1,17 +1,25 @@
-// src/pages/Manicure/Manicure.jsx
 import React, { useState, useEffect } from 'react';
 import styles from './services.module.css';
 import manicureimg from '../../images/manicureimg.png';
-
+import Modal from '../../shared/BookingModal/BookingModal.jsx';
 
 const Manicure = () => {
   const [prices, setPrices] = useState([]);
   const [description] = useState('Эти процедуры позволяют чувствовать себя уверенно в любой ситуации. Более того, нейл-дизайн помогает разнообразить образ, сделать его более стильным и актуальным. Наш Салон красоты предлагает девушкам качественные услуги ногтевого сервиса, а опытные мастера – гордость салона. Мы предлагаем широкий выбор уходовых процедур,  разные виды маникюра и педикюра. В салоне используются только профессиональные декоративные покрытия известных мировых брендов.');
+  const [isModalOpen, setIsModalOpen] = useState(false); 
 
   useEffect(() => {
     const storedPrices = JSON.parse(localStorage.getItem('prices')) || {};
     setPrices(storedPrices.manicure || []);
   }, []);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <div className={styles.container}>
@@ -41,8 +49,9 @@ const Manicure = () => {
             </tbody>
           </table>
         </div>
-        <button>Записаться</button>
+        <button className={styles.button} onClick={openModal}>Записаться</button>
       </div>
+      {isModalOpen && <Modal onClose={closeModal} />} 
     </div>
   );
 };
