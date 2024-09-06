@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './shared/Header/Header';
-import Home from './pages/Home/Home'; // Импортируем Home
-import Admin from './pages/Admin/Admin'; // Импортируем Admin
-import './index.css'; // Импортируем общий CSS
+import Home from './pages/Home/Home'; 
+import Admin from './pages/Admin/Admin'; 
+import './index.css'; 
 import Depilation from './pages/services/Depilation';
 import Brows from './pages/services/Brows';
 import Manicure from './pages/services/Manicure';

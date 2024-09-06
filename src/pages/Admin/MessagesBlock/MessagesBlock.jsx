@@ -1,4 +1,3 @@
-// src/components/MessagesBlock/MessagesBlock.jsx
 import React, { useEffect, useState } from 'react';
 import styles from './MessagesBlock.module.css';
 
@@ -12,7 +11,7 @@ const MessagesBlock = () => {
     };
 
     loadMessages();
-  }, []); // Зависимости пустые, чтобы этот эффект выполнялся только при монтировании компонента
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -24,10 +23,10 @@ const MessagesBlock = () => {
       });
       setMessages(updatedMessages);
       localStorage.setItem('messages', JSON.stringify(updatedMessages));
-    }, 60000); // Проверка каждую минуту
+    }, 60000); 
 
     return () => clearInterval(interval);
-  }, []); // Зависимости пустые, чтобы этот эффект выполнялся только при монтировании компонента
+  }, []); 
 
   const handleDelete = (index) => {
     const updatedMessages = messages.filter((_, i) => i !== index);

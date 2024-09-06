@@ -1,6 +1,6 @@
-/* Фон блока */
+
 .whyUsBlock {
-    background-color: #e9e9e9; /* Розовый фон блока */
+    background-color: #e9e9e9;
     box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     display: flex;
@@ -11,24 +11,24 @@
     border-radius: 10px;
   }
   
-  /* Заголовок блока */
+
   .title {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 20px; /* Отступ снизу */
+    margin-bottom: 20px;
   }
   
-  /* Стили для карточек */
+
   .cardsContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Расстояние между карточками */
-    justify-content: center; /* Центрирование карточек по горизонтали */
+    gap: 20px; 
+    justify-content: center;
   }
   
   .card {
-    width: 200px; /* Ширина карточки */
-    height: 200px; /* Высота карточки (делаем карточку квадратной) */
+    width: 200px; 
+    height: 200px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,18 +37,18 @@
   }
   
   .card img {
-    width: 60px; /* Размер иконки */
+    width: 60px; 
     height: 60px;
-    margin-bottom: 10px; /* Отступ между иконкой и заголовком */
+    margin-bottom: 10px; 
   }
   
   .card h3 {
-    margin: 10px 0; /* Отступы вокруг заголовка */
+    margin: 10px 0; 
     font-size: 18px;
   }
   
   .card p {
     font-size: 14px;
-    color: #555; /* Цвет текста */
+    color: #555;
   }
   

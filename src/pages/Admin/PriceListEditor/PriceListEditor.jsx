@@ -1,4 +1,3 @@
-// src/Admin/PriceListEditor/PriceListEditor.jsx
 import React, { useState, useEffect } from 'react';
 import styles from './PriceListEditor.module.css';
 
@@ -6,7 +5,7 @@ const PriceListEditor = () => {
   const [selectedPage, setSelectedPage] = useState('depilation');
   const [prices, setPrices] = useState([]);
   const [newItem, setNewItem] = useState({ name: '', price: '' });
-  const [pages] = useState(['depilation', 'manicure', 'brows', 'haircut']); // Возможные страницы
+  const [pages] = useState(['depilation', 'manicure', 'brows', 'haircut']); 
 
   useEffect(() => {
     const storedPrices = JSON.parse(localStorage.getItem('prices')) || {};

@@ -1,4 +1,3 @@
-// src/pages/Brows/Brows.jsx
 import React, { useState, useEffect } from 'react';
 import styles from './services.module.css';
 import browsimg from '../../images/browsimg.png';

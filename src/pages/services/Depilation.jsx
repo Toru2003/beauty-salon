@@ -1,4 +1,4 @@
-// src/pages/Depilation/Depilation.jsx
+
 import React, { useState, useEffect } from 'react';
 import styles from './services.module.css';
 import Modal from '../../shared/BookingModal/BookingModal.jsx';
@@ -7,13 +7,12 @@ import imagedepilation from '../../images/depilation.png';
 const Depilation = () => {
   const [prices, setPrices] = useState([]);
   const [description] = useState('Депиляция – это процесс удаления нежелательных волос. В нашем салоне Вы можете удалить волоски из подмышечных впадин, с рук, живота, ягодиц, бикини и спины. Депиляция – это еще и неотъемлемая часть подготовки к пляжному сезону, когда все то, что было скрыто под одеждой, становится заметным.');
-  const [isModalOpen, setIsModalOpen] = useState(false); // Состояние для управления видимостью модального окна
+  const [isModalOpen, setIsModalOpen] = useState(false); 
 
   useEffect(() => {
-    // Избегайте изменения состояния в зависимости от самого состояния
     const storedPrices = JSON.parse(localStorage.getItem('prices')) || {};
     setPrices(storedPrices.depilation || []);
-  }, []); // Пустой массив зависимостей, чтобы useEffect вызывался только при монтировании
+  }, []); 
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -52,7 +51,7 @@ const Depilation = () => {
         </div>
         <button className={styles.button} onClick={openModal}>Записаться</button>
       </div>
-      {isModalOpen && <Modal onClose={closeModal} />} {/* Вставляем модальное окно */}
+      {isModalOpen && <Modal onClose={closeModal} />} 
     </div>
   );
 };

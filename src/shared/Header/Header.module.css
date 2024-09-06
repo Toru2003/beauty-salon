@@ -10,6 +10,7 @@
   color: white;
   padding: 10px 20% 20px 20%;
   z-index: 100;
+  box-shadow:  0px 10px 10px rgba(0, 0, 0, 0.274);
 }
 
 
@@ -20,9 +21,9 @@
   display: flex;
   justify-items: center;
   justify-content: center;
-  margin-right: 20px; /* Отступ для лого */
-  text-decoration: none; /* Убирает подчеркивание */
-  color: rgb(228, 228, 228); /* Устанавливает цвет текста ссылки на белый */
+  margin-right: 20px; 
+  text-decoration: none; 
+  color: rgb(228, 228, 228); 
   font-family: "Sevillana", cursive;
   font-style: normal;
 }
@@ -35,14 +36,14 @@
 }
 
 .logoico{
-  width: 45px; /* Задайте нужный размер логотипа */
+  width: 45px; 
   height: auto;
-  fill: aqua;
+  fill: rgb(255, 255, 255);
 }
 
 .info {
   display: flex;
-  gap: 100px; /* Отступы между блоками справа */
+  gap: 100px; 
 }
 
 .infoBlock {
