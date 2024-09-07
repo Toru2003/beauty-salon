@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Login.module.css';
+import gifimg from '../../../images/admin.gif';
 
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
@@ -42,7 +43,7 @@ const Login = ({ onLogin }) => {
       </div>
       <div className={styles.imageContainer}>
         <img
-          src="https://avatars.mds.yandex.net/i?id=5af9e137db54c2ec0243e18572e767c2_l-5246115-images-thumbs&n=13"
+          src={gifimg}
           alt="Admin"
           className={styles.image}
         />

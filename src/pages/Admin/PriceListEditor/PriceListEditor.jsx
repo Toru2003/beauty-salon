@@ -4,7 +4,6 @@ import styles from './PriceListEditor.module.css';
 const PriceListEditor = () => {
   const [selectedPage, setSelectedPage] = useState('depilation');
   const [prices, setPrices] = useState([]);
-  const [newItem, setNewItem] = useState({ name: '', price: '' });
   const [pages] = useState(['depilation', 'manicure', 'brows', 'haircut']); 
 
   useEffect(() => {

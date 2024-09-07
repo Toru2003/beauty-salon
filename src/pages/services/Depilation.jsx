@@ -42,7 +42,7 @@ const Depilation = () => {
               {prices.map((item, index) => (
                 <tr key={index}>
                   <td>{item.name}</td>
-                  <td>{item.price}</td>
+                  <td>{item.price} ₽</td>
                 </tr>
               ))}
             </tbody>
