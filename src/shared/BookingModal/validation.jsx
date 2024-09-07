@@ -20,8 +20,14 @@ export const validateFields = (fields) => {
     if (!fields.date) {
         errors.date = 'Заполните поле';
     }
+
     if (!fields.time) {
         errors.time = 'Заполните поле';
+    }
+
+    const dateTimeError = isDateTimeValid(fields.date, fields.time);
+    if (dateTimeError) {
+        errors.date = dateTimeError;
     }
 
     if (!Object.values(fields.services).some((service) => service)) {
@@ -29,4 +35,20 @@ export const validateFields = (fields) => {
     }
 
     return errors;
+};
+
+const isDateTimeValid = (date, time) => {
+    const now = new Date();
+    const selectedDateTime = new Date(`${date}T${time}`);
+
+    if (selectedDateTime < now) {
+        return 'Дата и время уже прошли.';
+    }
+
+    const hour = selectedDateTime.getHours();
+    if (hour < 9 || hour > 20 || (hour === 20 && selectedDateTime.getMinutes() > 0)) {
+        return 'Мы работаем с 9:00 до 21:00.';
+    }
+
+    return null;
 };

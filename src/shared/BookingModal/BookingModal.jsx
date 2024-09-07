@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styles from './BookingModal.module.css';
 import MaskedInput from 'react-text-mask';  // Импортируем MaskedInput
 import { validateFields } from './validation'; // Импортируем функцию валидации
@@ -40,6 +40,22 @@ const Modal = ({ onClose }) => {
     setter(capitalizeFirstLetter(formattedValue));
   };
 
+  const isDateTimeValid = (date, time) => {
+    const now = new Date();
+    const selectedDateTime = new Date(`${date}T${time}`);
+
+    if (selectedDateTime < now) {
+      return 'Дата и время уже прошли.';
+    }
+
+    const hour = selectedDateTime.getHours();
+    if (hour < 9 || hour > 20 || (hour === 20 && selectedDateTime.getMinutes() > 0)) {
+      return 'Мы работаем с 9:00 до 21:00.';
+    }
+
+    return null;
+  };
+
   const handleSubmit = () => {
     const fields = { name, surname, phone, date, time, services };
     const validationErrors = validateFields(fields);
@@ -63,6 +79,13 @@ const Modal = ({ onClose }) => {
         setErrors(validationErrors);
         return;
       }
+    }
+
+    const dateTimeError = isDateTimeValid(date, time);
+    if (dateTimeError) {
+      validationErrors.date = dateTimeError;
+      setErrors(validationErrors);
+      return;
     }
 
     if (Object.keys(validationErrors).length > 0) {
