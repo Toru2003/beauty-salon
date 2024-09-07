@@ -1,31 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import styles from './MessagesBlock.module.css';
 
+const MESSAGES_PER_PAGE = 5;
+
 const MessagesBlock = () => {
   const [messages, setMessages] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // Загрузка сообщений из localStorage
+  const loadMessages = () => {
+    const savedMessages = JSON.parse(localStorage.getItem('messages')) || [];
+    setMessages(savedMessages.reverse()); // Новые сообщения сверху
+  };
 
   useEffect(() => {
-    const loadMessages = () => {
-      const savedMessages = JSON.parse(localStorage.getItem('messages')) || [];
-      setMessages(savedMessages);
-    };
+    loadMessages(); // Загрузить сообщения при монтировании компонента
 
-    loadMessages();
-  }, []);
+    // Установка прослушивателя событий для обновления данных при изменении localStorage
+    window.addEventListener('storage', loadMessages);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const savedMessages = JSON.parse(localStorage.getItem('messages')) || [];
-      const updatedMessages = savedMessages.filter(message => {
-        const messageTime = new Date(message.timestamp).getTime();
-        return now < messageTime + 60 * 60 * 1000;
-      });
-      setMessages(updatedMessages);
-      localStorage.setItem('messages', JSON.stringify(updatedMessages));
-    }, 60000); 
-
-    return () => clearInterval(interval);
+    // Очистка при размонтировании
+    return () => window.removeEventListener('storage', loadMessages);
   }, []); 
 
   const handleDelete = (index) => {
@@ -34,14 +29,22 @@ const MessagesBlock = () => {
     localStorage.setItem('messages', JSON.stringify(updatedMessages));
   };
 
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const paginatedMessages = messages.slice((currentPage - 1) * MESSAGES_PER_PAGE, currentPage * MESSAGES_PER_PAGE);
+
+  const totalPages = Math.ceil(messages.length / MESSAGES_PER_PAGE);
+
   return (
     <div className={styles.messagesContainer}>
       <h2>Сообщения</h2>
-      {messages.length === 0 ? (
+      {paginatedMessages.length === 0 ? (
         <p>Нет записей</p>
       ) : (
         <ul>
-          {messages
+          {paginatedMessages
             .filter(message => message.name && message.surname && message.phone) // Фильтрация пустых сообщений
             .map((message, index) => (
               <li key={index} className={styles.messageItem}>
@@ -57,6 +60,18 @@ const MessagesBlock = () => {
             ))}
         </ul>
       )}
+      <div className={styles.pagination}>
+        {[...Array(totalPages).keys()].map(page => (
+          <button
+            key={page + 1}
+            className={styles.pageButton}
+            onClick={() => handlePageChange(page + 1)}
+            disabled={currentPage === page + 1}
+          >
+            {page + 1}
+          </button>
+        ))}
+      </div>
     </div>
   );
 };

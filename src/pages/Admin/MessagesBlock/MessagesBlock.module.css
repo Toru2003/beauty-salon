@@ -35,4 +35,29 @@
   .messageItem button:hover {
     background-color: #c0392b;
   }
+
+  .pagination {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .pageButton {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 5px;
+  }
+  
+  .pageButton:hover {
+    background-color: #c0392b;
+  }
+  
+  .pageButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
   
