@@ -3,7 +3,6 @@ import styles from './MessagesBlock.module.css';
 
 const MessagesBlock = () => {
   const [messages, setMessages] = useState([]);
-  const [prices, setPrices] = useState({});
 
   useEffect(() => {
     const loadMessages = () => {
@@ -29,11 +28,6 @@ const MessagesBlock = () => {
     return () => clearInterval(interval);
   }, []); 
 
-  useEffect(() => {
-    const storedPrices = JSON.parse(localStorage.getItem('prices')) || {};
-    setPrices(storedPrices);
-  }, []);
-
   const handleDelete = (index) => {
     const updatedMessages = messages.filter((_, i) => i !== index);
     setMessages(updatedMessages);
@@ -58,30 +52,6 @@ const MessagesBlock = () => {
                 <p><strong>Время:</strong> {message.time}</p>
                 <p><strong>Комментарий:</strong> {message.comment}</p>
                 <p><strong>Услуги:</strong> {Array.isArray(message.services) ? message.services.join(', ') : 'Не указаны'}</p>
-                <div>
-                  <h4>Прайс-лист выбранных услуг:</h4>
-                  <ul>
-                    {Array.isArray(message.services) && message.services.length > 0 ? (
-                      message.services.map((serviceName, i) => {
-                        const servicePrices = prices[serviceName] || [];
-                        return (
-                          <div key={i}>
-                            <h5>{serviceName}</h5>
-                            <ul>
-                              {servicePrices.map((priceItem, j) => (
-                                <li key={`${i}-${j}`}>
-                                  {priceItem.name} - {priceItem.price} ₽
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        );
-                      })
-                    ) : (
-                      <p>Не указаны прайсы для выбранных услуг</p>
-                    )}
-                  </ul>
-                </div>
                 <button onClick={() => handleDelete(index)}>Удалить</button>
               </li>
             ))}
