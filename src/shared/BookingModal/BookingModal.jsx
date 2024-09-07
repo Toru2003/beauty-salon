@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './BookingModal.module.css';
 import MaskedInput from 'react-text-mask';  // Импортируем MaskedInput
-import { validateFields } from './validation'; // Импортируем функцию валидации
+import { validateFields } from '../../shared/validation'; // Импортируем функцию валидации
 
 const capitalizeFirstLetter = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
