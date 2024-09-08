@@ -1,6 +1,8 @@
 .adminContainer {
     display: flex;
-    min-height: 600px;
+    min-height: 500px;
+    border-radius: 10px;
+    margin-top: 20px;
   }
   
   .content {

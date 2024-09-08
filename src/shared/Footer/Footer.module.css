@@ -1,15 +1,22 @@
 .footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-  
-  .icon {
-    font-size: 24px;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9b9b9bc4;
+  height: 100px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 50px;
+  border-radius: 100px 100px 0 0;
+}
+
+.icon {
+  font-size: 50px;
+}
+
+.logo {
+  width: 50px; /* Задайте нужный размер логотипа */
+  height: auto;
+  fill: aqua;
+}

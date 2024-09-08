@@ -1,0 +1,63 @@
+.messagesContainer {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .messagesContainer h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .messagesContainer p {
+    margin: 5px 0;
+  }
+  
+  .messageItem {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .messageItem button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .messageItem button:hover {
+    background-color: #c0392b;
+  }
+
+  .pagination {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .pageButton {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 5px;
+  }
+  
+  .pageButton:hover {
+    background-color: #c0392b;
+  }
+  
+  .pageButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

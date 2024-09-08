@@ -42,12 +42,12 @@
 }
 
 .saveButton {
-  background-color: #2196f3;
+  background-color: #ff6347;
   color: white;
 }
 
 .saveButton:hover {
-  background-color: #1e88e5;
+  background-color: #ff4500;
 }
 
 .noPromotions {

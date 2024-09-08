@@ -1,0 +1,75 @@
+/* src/Admin/PriceListEditor/PriceListEditor.module.css */
+.editor {
+  padding: 20px;
+}
+
+.pageSelector {
+  margin-bottom: 20px;
+}
+
+.pageSelector label {
+  margin-right: 10px;
+}
+
+.pageSelector select {
+  padding: 5px;
+}
+
+.table {
+  margin-top: 20px;
+}
+
+.headers {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 10px;
+  width: 700px;
+}
+
+.header {
+  flex: 1;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.row input {
+  margin-right: 10px;
+  padding: 5px;
+  flex: 1;
+}
+
+.row button {
+  margin: 0 0;
+}
+
+button {
+  padding: 10px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.buttonsa {
+  margin: 10px 10px;
+}
+
+button:hover {
+  background-color: #ff4500;
+}
+
+.savedButton {
+  background-color: #28a745; /* Зеленый цвет */
+  transition: background-color 0.3s ease; /* Плавное изменение цвета */
+}
+
+.emptyMessage {
+  color: #888; /* Серый цвет для текста */
+  font-style: italic;
+}

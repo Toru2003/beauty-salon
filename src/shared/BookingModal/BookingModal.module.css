@@ -1,0 +1,166 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h3{
+  margin: 0;
+}
+
+.modal {
+  margin-top: 50px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh; /* Ограничиваем высоту модального окна */
+  overflow-y: auto; /* Добавляем вертикальный скролл при необходимости */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.error {
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.formLabelWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.formLabelWrapper label {
+  width: 150px;
+  margin-right: 10px;
+}
+
+.formLabelWrapper .errorText {
+  margin-left: 10px;
+  color: red;
+  font-size: 12px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+textarea,
+.phoneInput {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+textarea {
+  height: 100px;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+label input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.errorText {
+  color: red;
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+button {
+  padding: 10px;
+  background: #f39c12;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #e67e22;
+}
+
+/* Стили для блока с прайс-листами */
+.servicePrices {
+  max-height: 200px; /* Ограничение высоты блока */
+  overflow-y: auto; /* Вертикальный скролл */
+  margin-top: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.servicePrices label {
+  display: block; /* Каждая услуга на новой строке */
+  margin-bottom: 8px;
+}
+
+.servicePrices input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* Ширина скроллера */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Цвет фона трека скроллера */
+  border-radius: 10px; /* Радиус скругления трека скроллера */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Цвет ползунка скроллера */
+  border-radius: 10px; /* Радиус скругления ползунка */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Цвет ползунка при наведении */
+}

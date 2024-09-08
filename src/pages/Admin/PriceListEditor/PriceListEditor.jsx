@@ -1,0 +1,106 @@
+import React, { useState, useEffect } from 'react';
+import styles from './PriceListEditor.module.css';
+
+const PriceListEditor = () => {
+  const [selectedPage, setSelectedPage] = useState('depilation');
+  const [prices, setPrices] = useState([]);
+  const [pages] = useState(['depilation', 'manicure', 'brows', 'haircut']);
+  const [saveStatus, setSaveStatus] = useState('Сохранить изменения'); // Для отслеживания состояния кнопки
+
+  useEffect(() => {
+    const storedPrices = JSON.parse(localStorage.getItem('prices')) || {};
+    setPrices(storedPrices[selectedPage] || []);
+  }, [selectedPage]);
+
+  const handleChange = (index, field, value) => {
+    const updatedPrices = [...prices];
+    updatedPrices[index] = { ...updatedPrices[index], [field]: value };
+    setPrices(updatedPrices);
+  };
+
+  const handleAddItem = () => {
+    setPrices([...prices, { name: '', price: '' }]);
+  };
+
+  const handleSave = () => {
+    const storedPrices = JSON.parse(localStorage.getItem('prices')) || {};
+    storedPrices[selectedPage] = prices;
+    localStorage.setItem('prices', JSON.stringify(storedPrices));
+    
+    // Обновляем статус кнопки
+    setSaveStatus('Сохранено');
+    setTimeout(() => {
+      setSaveStatus('Сохранить изменения'); // Возвращаем исходный текст кнопки через 1 секунду
+    }, 1000);
+  };
+
+  const handleDelete = (index) => {
+    const updatedPrices = prices.filter((_, i) => i !== index);
+    setPrices(updatedPrices);
+  };
+
+  const handlePageChange = (e) => {
+    setSelectedPage(e.target.value);
+  };
+
+  // Функция для фильтрации ввода только цифр
+  const handlePriceChange = (index, value) => {
+    // Убираем все символы, кроме цифр
+    const numericValue = value.replace(/[^0-9]/g, '');
+    handleChange(index, 'price', numericValue);
+  };
+
+  return (
+    <div className={styles.editor}>
+      <h2>Редактор прайс-листа</h2>
+      <div className={styles.pageSelector}>
+        <label htmlFor="page">Выберите страницу:</label>
+        <select id="page" value={selectedPage} onChange={handlePageChange}>
+          {pages.map((page) => (
+            <option key={page} value={page}>
+              {page.charAt(0).toUpperCase() + page.slice(1)}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div className={styles.table}>
+        {prices.length > 0 && (
+          <div className={styles.headers}>
+            <span className={styles.header}>Название</span>
+            <span className={styles.header}>Цена</span>
+          </div>
+        )}
+        {prices.length === 0 ? (
+          <p className={styles.emptyMessage}>Нажмите добавить услугу</p>
+        ) : (
+          prices.map((item, index) => (
+            <div key={index} className={styles.row}>
+              <input
+                type="text"
+                value={item.name}
+                onChange={(e) => handleChange(index, 'name', e.target.value)}
+                placeholder="Название"
+              />
+              <input
+                type="text"
+                value={item.price}
+                onChange={(e) => handlePriceChange(index, e.target.value)}
+                placeholder="Цена"
+              />
+              <button onClick={() => handleDelete(index)}>Удалить</button>
+            </div>
+          ))
+        )}
+        <button className={styles.buttonsa} onClick={handleAddItem}>Добавить новую услугу</button>
+        <button 
+          className={`${styles.buttonsa} ${saveStatus === 'Сохранено' ? styles.savedButton : ''}`} 
+          onClick={handleSave}
+        >
+          {saveStatus}
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default PriceListEditor;

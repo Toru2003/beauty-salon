@@ -14,12 +14,41 @@ code {
     monospace;
 }
 
-/* Общие стили для отступов слева и справа */
-.pageContainer {
-  padding: 0 100px; /* Отступы слева и справа */
-  min-height: 100vh; /* Минимальная высота 100% от высоты окна браузера */
+
+#root {
   display: flex;
   flex-direction: column;
-  margin-top: 80px; /* Отступ сверху, чтобы не перекрывать контент хедером */
-  margin-bottom: 80px;
+  min-height: 100%;
 }
+
+main {
+  flex: 1;
+}
+
+
+
+
+
+.pageContainer {
+  padding: 0 100px; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px; 
+}
+
+/* Стили для навигационных стрелок */
+.swiper-button-prev, .swiper-button-next {
+  color: #df9100 !important;  /* Оранжевый цвет для стрелок */
+}
+
+/* Стили для пульсационных точек (радио) */
+.swiper-pagination-bullet {
+  background-color: #df9100 !important; /* Оранжевый цвет для точек */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #df9100 !important; /* Оранжевый цвет для активной точки */
+}
+  
+  
