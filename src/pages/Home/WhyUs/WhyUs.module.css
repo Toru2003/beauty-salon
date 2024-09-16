@@ -34,12 +34,15 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    fill: orange !important;
+
   }
   
   .card img {
     width: 60px; 
     height: 60px;
     margin-bottom: 10px; 
+    fill: orange !important;
   }
   
   .card h3 {
