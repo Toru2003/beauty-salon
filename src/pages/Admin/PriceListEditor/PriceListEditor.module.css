@@ -64,11 +64,11 @@ button:hover {
 }
 
 .savedButton {
-  background-color: #28a745; /* Зеленый цвет */
-  transition: background-color 0.3s ease; /* Плавное изменение цвета */
+  background-color: #28a745; 
+  transition: background-color 0.3s ease; 
 }
 
 .emptyMessage {
-  color: #888; /* Серый цвет для текста */
+  color: #888;
   font-style: italic;
 }

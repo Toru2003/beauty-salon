@@ -42,7 +42,7 @@ const MessagesBlock = () => {
       ) : (
         <ul>
           {paginatedMessages
-            .filter(message => message.name && message.surname && message.phone) // Фильтрация пустых сообщений
+            .filter(message => message.name && message.surname && message.phone) 
             .map((message, index) => (
               <li key={index} className={styles.messageItem}>
                 <p><strong>Имя:</strong> {message.name}</p>

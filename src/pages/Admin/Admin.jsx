@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Login from './Login/Login';
 import Tabs from './Tabs/Tabs';
 import PromotionsEditor from './PromotionsEditor/PromotionsEditor';
-import PriceListEditor from './PriceListEditor/PriceListEditor'; // Импортируем редактор прайс-листа
+import PriceListEditor from './PriceListEditor/PriceListEditor'; 
 import styles from './Admin.module.css';
 import MessagesBlock from './MessagesBlock/MessagesBlock.jsx';
 

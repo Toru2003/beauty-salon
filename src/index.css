@@ -27,11 +27,17 @@ main {
 
 
 .pageContainer {
-  padding: 0 100px; 
+  padding: 0 10vh; 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   margin-top: 80px; 
+}
+
+@media (max-width: 800px) {
+  .pageContainer {
+    padding: 0 20px; 
+  }
 }
 
 .swiper-button-prev, .swiper-button-next {

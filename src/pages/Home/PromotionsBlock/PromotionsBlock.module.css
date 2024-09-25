@@ -31,4 +31,17 @@
     color: #333; 
     font-style: italic;
   }
+
+  @media (max-width: 1200px) {
+    .promotionsBlock {
+      margin: 20px auto; 
+    }
+  }
+
+
+@media (max-width: 880px) {
+  .promotionsBlock {
+    margin: 20px auto; 
+  }
+}
   

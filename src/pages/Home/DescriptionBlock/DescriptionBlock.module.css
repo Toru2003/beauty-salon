@@ -1,61 +1,132 @@
 .homeSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 20px;
-    background-color: #ffffff77;
-    min-height: 600px;
-    border-radius: 50px;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff77;
+  min-height: 600px;
+  border-radius: 50px;
+  flex-direction: row;
+  gap: 100px;
+}
+
+.textBlock {
+  flex: 1;
+  max-width: 30%;
+  text-align: right;
+  font-family: "Monospace", cursive;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: "Sevillana", cursive;
+}
+
+.description {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: "arial", cursive;
+  font-style: italic;
+}
+
+.servicesButton {
+  padding: 15px 30px;
+  background-color: #ff6347;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.servicesButton:hover {
+  background-color: #ff4500;
+}
+
+.imageBlock {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .homeSection {
+    flex-direction: column;
+    padding: 10px;
+    min-height: auto;
   }
-  
+
   .textBlock {
-    flex: 1;
-    max-width: 30%;
-    text-align: right;
-    font-family: "Monospace", cursive;
+    max-width: 100%;
+    text-align: center;
   }
-  
+
   .title {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    font-family: "Sevillana", cursive;
+    font-size: 36px;
   }
-  
+
   .description {
-    font-size: 20px;
-    margin-bottom: 30px;
-    font-family: "arial", cursive;
-    font-style: italic;
-  }
-  
-  .servicesButton {
-    padding: 15px 30px;
-    background-color: #ff6347;
-    color: white;
     font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
   }
-  
-  .servicesButton:hover {
-    background-color: #ff4500;
-  }
-  
+
   .imageBlock {
-    flex: 1;
-    max-width: 50%;
-    display: flex;
-    justify-content: center;
+    max-width: 100%;
+    margin-top: 20px;
   }
-  
+
   .image {
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
   }
-  
+
+  .servicesButton {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .homeSection {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .servicesButton {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .homeSection {
+    gap: 20px;
+  }
+}
