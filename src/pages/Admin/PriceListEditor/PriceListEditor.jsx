@@ -27,10 +27,10 @@ const PriceListEditor = () => {
     storedPrices[selectedPage] = prices;
     localStorage.setItem('prices', JSON.stringify(storedPrices));
     
-    // Обновляем статус кнопки
+
     setSaveStatus('Сохранено');
     setTimeout(() => {
-      setSaveStatus('Сохранить изменения'); // Возвращаем исходный текст кнопки через 1 секунду
+      setSaveStatus('Сохранить изменения');
     }, 1000);
   };
 
@@ -43,9 +43,7 @@ const PriceListEditor = () => {
     setSelectedPage(e.target.value);
   };
 
-  // Функция для фильтрации ввода только цифр
   const handlePriceChange = (index, value) => {
-    // Убираем все символы, кроме цифр
     const numericValue = value.replace(/[^0-9]/g, '');
     handleChange(index, 'price', numericValue);
   };

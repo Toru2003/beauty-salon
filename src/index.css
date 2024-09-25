@@ -26,9 +26,6 @@ main {
 }
 
 
-
-
-
 .pageContainer {
   padding: 0 100px; 
   min-height: 100vh;
@@ -37,18 +34,16 @@ main {
   margin-top: 80px; 
 }
 
-/* Стили для навигационных стрелок */
 .swiper-button-prev, .swiper-button-next {
-  color: #df9100 !important;  /* Оранжевый цвет для стрелок */
+  color: #df9100 !important;  
 }
 
-/* Стили для пульсационных точек (радио) */
 .swiper-pagination-bullet {
-  background-color: #df9100 !important; /* Оранжевый цвет для точек */
+  background-color: #df9100 !important; 
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #df9100 !important; /* Оранжевый цвет для активной точки */
+  background-color: #df9100 !important; 
 }
   
   

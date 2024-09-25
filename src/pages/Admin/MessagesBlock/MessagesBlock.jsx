@@ -7,19 +7,16 @@ const MessagesBlock = () => {
   const [messages, setMessages] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Загрузка сообщений из localStorage
   const loadMessages = () => {
     const savedMessages = JSON.parse(localStorage.getItem('messages')) || [];
-    setMessages(savedMessages.reverse()); // Новые сообщения сверху
+    setMessages(savedMessages.reverse());
   };
 
   useEffect(() => {
-    loadMessages(); // Загрузить сообщения при монтировании компонента
+    loadMessages(); 
 
-    // Установка прослушивателя событий для обновления данных при изменении localStorage
     window.addEventListener('storage', loadMessages);
 
-    // Очистка при размонтировании
     return () => window.removeEventListener('storage', loadMessages);
   }, []); 
 

@@ -22,8 +22,8 @@ h3{
   position: relative;
   width: 90%;
   max-width: 500px;
-  max-height: 80vh; /* Ограничиваем высоту модального окна */
-  overflow-y: auto; /* Добавляем вертикальный скролл при необходимости */
+  max-height: 80vh;
+  overflow-y: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -128,10 +128,9 @@ button:hover {
   background: #e67e22;
 }
 
-/* Стили для блока с прайс-листами */
 .servicePrices {
-  max-height: 200px; /* Ограничение высоты блока */
-  overflow-y: auto; /* Вертикальный скролл */
+  max-height: 200px;
+  overflow-y: auto; 
   margin-top: 15px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -139,7 +138,7 @@ button:hover {
 }
 
 .servicePrices label {
-  display: block; /* Каждая услуга на новой строке */
+  display: block; 
   margin-bottom: 8px;
 }
 
@@ -148,19 +147,19 @@ button:hover {
 }
 
 ::-webkit-scrollbar {
-  width: 8px; /* Ширина скроллера */
+  width: 8px; 
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Цвет фона трека скроллера */
-  border-radius: 10px; /* Радиус скругления трека скроллера */
+  background: #f1f1f1; 
+  border-radius: 10px; 
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888; /* Цвет ползунка скроллера */
-  border-radius: 10px; /* Радиус скругления ползунка */
+  background: #888; 
+  border-radius: 10px; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Цвет ползунка при наведении */
+  background: #555; 
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './BookingModal.module.css';
-import MaskedInput from 'react-text-mask';  // Импортируем MaskedInput
-import { validateFields } from '../../shared/validation'; // Импортируем функцию валидации
+import MaskedInput from 'react-text-mask';  
+import { validateFields } from '../../shared/validation'; 
 
 const capitalizeFirstLetter = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
@@ -27,7 +27,7 @@ const Modal = ({ onClose }) => {
     brows: false,
     haircut: false,
   });
-  const [errors, setErrors] = useState({});  // Для хранения ошибок
+  const [errors, setErrors] = useState({});  
 
   const handleServiceChange = (e) => {
     const { name, checked } = e.target;
@@ -36,7 +36,7 @@ const Modal = ({ onClose }) => {
 
   const handleTextChange = (e, setter) => {
     const value = e.target.value;
-    const formattedValue = value.replace(/[^a-zA-Zа-яА-Я]/g, ''); // Оставляем только буквы
+    const formattedValue = value.replace(/[^a-zA-Zа-яА-Я]/g, ''); 
     setter(capitalizeFirstLetter(formattedValue));
   };
 
@@ -60,11 +60,10 @@ const Modal = ({ onClose }) => {
     const fields = { name, surname, phone, date, time, services };
     const validationErrors = validateFields(fields);
 
-    // Проверка занятости времени
     if (!validationErrors.date && !validationErrors.time) {
       const messages = JSON.parse(localStorage.getItem('messages')) || [];
       const inputDateTime = new Date(`${date}T${time}`).getTime();
-      const halfHour = 30 * 60 * 1000; // 30 минут
+      const halfHour = 30 * 60 * 1000;
 
       const isTimeConflict = messages.some(message => {
         const messageDateTime = new Date(`${message.date}T${message.time}`).getTime();
@@ -89,17 +88,15 @@ const Modal = ({ onClose }) => {
     }
 
     if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);  // Если есть ошибки, сохраняем их
+      setErrors(validationErrors); 
       return;
     }
 
-    // Проверяем, что все обязательные поля заполнены
     if (!name || !surname || !phone || !date || !time || !Object.values(services).some(Boolean)) {
       setErrors({ global: 'Заполните все обязательные поля.' });
       return;
     }
 
-    // Если ошибок нет, продолжаем выполнение
     const newMessage = {
       name,
       surname,
